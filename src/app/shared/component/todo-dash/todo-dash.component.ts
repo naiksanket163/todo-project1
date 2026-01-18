@@ -16,4 +16,14 @@ export class TodoDashComponent implements OnInit {
 
   todoArr : Array<Itodo> = todoArray
 
+definationRemove(todo:string){
+let getindex = this.todoArr.findIndex(todo => todo.todoId == todo.todoId);
+this.todoArr.splice(getindex,1)
+
+}
+
+
+
+
+
 }

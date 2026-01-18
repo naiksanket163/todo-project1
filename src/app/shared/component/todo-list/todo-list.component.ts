@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Itodo } from '../../models/todo';
 
 @Component({
@@ -14,5 +14,14 @@ export class TodoListComponent implements OnInit {
   }
 
   @Input() todoData! : Array<Itodo>
+  @Output()EmitRemoveObj: EventEmitter <string> = new EventEmitter<string> ();
+
+
+Onremove(id:string){
+this.EmitRemoveObj.emit(id)
+}
+
 
 }
+
+
