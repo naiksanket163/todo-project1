@@ -7,7 +7,8 @@ import { TodoFormComponent } from './shared/component/todo-form/todo-form.compon
 import { TodoListComponent } from './shared/component/todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
