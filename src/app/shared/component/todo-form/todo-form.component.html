@@ -1,6 +1,6 @@
 <div class="card mt-3">
 <div class="card-body">
-    <form #todoForm="ngForm">
+    <form #todoForm="ngForm" (ngSubmit)="ontodoAdd()">
         <div class="form-group">
             <label for="todoItem">Todo Form</label>
             <input required ngModel name="todoItem" #todoItem="ngModel" type="text" class="form-control">

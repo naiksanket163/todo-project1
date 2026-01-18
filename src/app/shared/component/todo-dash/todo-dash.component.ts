@@ -16,4 +16,8 @@ export class TodoDashComponent implements OnInit {
 
   todoArr : Array<Itodo> = todoArray
 
+  getnewobj(todo : Itodo){
+    this.todoArr.push(todo)
+  }
+
 }
