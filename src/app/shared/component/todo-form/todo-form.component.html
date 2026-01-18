@@ -6,7 +6,8 @@
             <input required ngModel name="todoItem" #todoItem="ngModel" type="text" class="form-control">
         </div>
 
-        <button class="btn btn-primary btn-block">Add Todo</button>
+        <button *ngIf="!isInEditMode" class="btn btn-primary btn-block">Add Todo</button>
+        <button *ngIf="isInEditMode" (click)="onUpdate()" type="button" class="btn btn-danger btn-block">Update Todo</button>
     </form>
 </div>
 </div>
