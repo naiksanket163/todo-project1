@@ -1,0 +1,12 @@
+<ul class="list-group mt-3">
+    <li *ngFor="let todo of todoData"
+    class="list-group-item d-flex justify-content-between">
+        <strong>{{todo.todoItem}}</strong>
+
+        <div>
+            <button class="btn btn-primary">Edit</button>
+            <button class="btn btn-danger ml-2">Remove</button>
+
+        </div>
+    </li>
+</ul>
