@@ -26,8 +26,17 @@ export class TodoDashComponent implements OnInit {
 
   onUpdate(todo : Itodo){
     console.log(todo)
-    let getIndex = this.todoArr.findIndex(t => t.todoId == todo.todoId);
+    let getIndex = this.todoArr.findIndex(t => t.todoId === todo.todoId);
     this.todoArr[getIndex] = todo;
   }
+definationRemove(id:string){
+let getindex = this.todoArr.findIndex(todo => todo.todoId === id);
+this.todoArr.splice(getindex,1)
+
+}
+
+
+
+
 
 }

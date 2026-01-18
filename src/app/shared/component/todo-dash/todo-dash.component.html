@@ -10,7 +10,11 @@
         <div class="col-md-6">
             <app-todo-list
             [todoData]="todoArr"
-            (emitEditTodo)="onEdit($event)"></app-todo-list>
+            (emitEditTodo)="onEdit($event)"
+            (EmitRemoveObj)="definationRemove($event)"
+            ></app-todo-list>
+            
         </div>
+       
     </div>
 </div>

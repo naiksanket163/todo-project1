@@ -16,9 +16,18 @@ export class TodoListComponent implements OnInit {
   }
 
   @Input() todoData! : Array<Itodo>
+  @Output()EmitRemoveObj: EventEmitter <string> = new EventEmitter<string> ();
+
+
+Onremove(id:string){
+this.EmitRemoveObj.emit(id)
+}
+
 
   onEdit(todo :Itodo){
     this.emitEditTodo.emit(todo)
   }
 
 }
+
+
