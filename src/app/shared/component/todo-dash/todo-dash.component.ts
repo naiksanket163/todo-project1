@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Itodo } from '../../models/todo';
 import { todoArray } from '../const/todo';
+import { SnackBarService } from '../service/snackbar/snack-bar.service';
 
 @Component({
   selector: 'app-todo-dash',
@@ -10,7 +11,9 @@ import { todoArray } from '../const/todo';
 export class TodoDashComponent implements OnInit {
   editTodo !: Itodo
 
-  constructor() { }
+  constructor(
+    private _snackbar : SnackBarService
+  ) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +22,7 @@ export class TodoDashComponent implements OnInit {
 
   getnewobj(todo : Itodo){
     this.todoArr.push(todo)
+     this._snackbar.openSnackBar(`The Todo with id ${todo.todoId} is Added Successfully.`)
   }
   onEdit(todo : Itodo){
     this.editTodo = todo

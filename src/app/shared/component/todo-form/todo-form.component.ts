@@ -44,6 +44,8 @@ export class TodoFormComponent implements OnInit, OnChanges {
         todoId : this._uuidservice.uuid()
       }
       this.emitnewobj.emit(todoObj)
+      this.todoForm.reset()
+      
     }
   }
   onUpdate(){
