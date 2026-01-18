@@ -6,6 +6,8 @@ import { TodoDashComponent } from './shared/component/todo-dash/todo-dash.compon
 import { TodoFormComponent } from './shared/component/todo-form/todo-form.component';
 import { TodoListComponent } from './shared/component/todo-list/todo-list.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

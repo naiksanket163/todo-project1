@@ -8,6 +8,7 @@ import { todoArray } from '../const/todo';
   styleUrls: ['./todo-dash.component.scss']
 })
 export class TodoDashComponent implements OnInit {
+  editTodo !: Itodo
 
   constructor() { }
 
@@ -18,6 +19,15 @@ export class TodoDashComponent implements OnInit {
 
   getnewobj(todo : Itodo){
     this.todoArr.push(todo)
+  }
+  onEdit(todo : Itodo){
+    this.editTodo = todo
+  }
+
+  onUpdate(todo : Itodo){
+    console.log(todo)
+    let getIndex = this.todoArr.findIndex(t => t.todoId == todo.todoId);
+    this.todoArr[getIndex] = todo;
   }
 
 }
